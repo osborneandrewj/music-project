@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Musical Structure Project</string>
+
+    <string name="library_button">My Library</string>
+    <string name="explore_button">Explore</string>
+    <string name="explore_activity_label">Explore New Music</string>
+    <string name="new_releases_button">New Releases</string>
+    <string name="settings_button">Settings</string>
+
+</resources>

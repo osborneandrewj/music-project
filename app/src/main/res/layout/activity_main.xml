@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.musicalstructureproject.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/android_primal"
+                android:gravity="center"
+                android:textColor="#ffffff" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:text="Current Song Playing"
+                    android:textSize="24sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@color/colorPrimary">
+
+                        <ImageView
+                            android:id="@+id/back_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="center"
+                            android:src="@drawable/ic_skip_previous_white_24dp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginLeft="4dp"
+                        android:background="@color/colorPrimary">
+
+                        <ImageView
+                            android:id="@+id/play_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="center"
+                            android:src="@drawable/ic_play_arrow_white_24dp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@color/colorPrimary">
+
+                        <ImageView
+                            android:id="@+id/next_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="center"
+                            android:src="@drawable/ic_skip_next_white_24dp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/myLibraryButton"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:text="@string/library_button" />
+
+        <Button
+            android:id="@+id/newReleasesButton"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:text="@string/new_releases_button" />
+
+        <Button
+            android:id="@+id/exploreButton"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:text="@string/explore_button" />
+
+        <Button
+            android:id="@+id/settingButton"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:text="@string/settings_button" />
+    </LinearLayout>
+</ScrollView>
