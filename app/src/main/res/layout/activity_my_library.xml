@@ -10,9 +10,18 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.android.musicalstructureproject.MyLibraryActivity">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/library_text" />
+        android:orientation="vertical">
 
+        <TextView
+            style="@style/ActivityLabelStyle"
+            android:text="@string/library_button" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/library_text" />
+    </LinearLayout>
 </ScrollView>
