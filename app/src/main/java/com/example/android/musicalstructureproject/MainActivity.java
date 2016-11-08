@@ -18,7 +18,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button myLibraryButton = (Button)findViewById(R.id.myLibraryButton);
+        //Open the MyLibraryActivity with the myLibraryButton
+        Button myLibraryButton = (Button) findViewById(R.id.myLibraryButton);
         myLibraryButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -26,8 +27,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-        Button exploreButton = (Button)findViewById(R.id.exploreButton);
+        //Open the ExploreActivity with the exploreButton
+        Button exploreButton = (Button) findViewById(R.id.exploreButton);
         exploreButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -35,8 +36,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-        Button newReleasesButton = (Button)findViewById(R.id.newReleasesButton);
+        //Open the NewReleasesActivity with the newReleasesButton
+        Button newReleasesButton = (Button) findViewById(R.id.newReleasesButton);
         newReleasesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -45,8 +46,8 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
-        Button settingsButton = (Button)findViewById(R.id.settingButton);
+        //Open the SettingsActivity with the settingButton
+        Button settingsButton = (Button) findViewById(R.id.settingButton);
         settingsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -56,16 +57,20 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        /**
+         * The following onCLick method adds functionality to the play_button in the main activity.
+         */
         final ImageView playButton = (ImageView) findViewById(R.id.play_button);
         playButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.v("onClick", "Well, got this far.");
-                if (playButton.getDrawable().getConstantState().equals(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_play_arrow_white_24dp, null).getConstantState())) {
-                    Log.v("onClick", "Now if");
+                //If the play button shows the play icon, turn it into the pause icon
+                if (playButton.getDrawable().getConstantState().equals(ResourcesCompat.
+                        getDrawable(getResources(), R.drawable.ic_play_arrow_white_24dp, null).
+                        getConstantState())) {
                     playButton.setImageResource(R.drawable.ic_pause_white_24dp);
                 } else {
-                    Log.v("onClick", "Now else");
+                    //Or if it shows the pause icon, change it into the play icon
                     playButton.setImageResource(R.drawable.ic_play_arrow_white_24dp);
                 }
 
